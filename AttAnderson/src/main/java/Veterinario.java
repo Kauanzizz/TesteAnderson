@@ -30,6 +30,7 @@ class Veterinario {
     }
 
     public List<Animal> listarAnimais() {
-        return getAnimais();
+        System.out.println("A lista possui " + animais.size() + " animais cadastrados!");
+        return animais;
     }
 }
