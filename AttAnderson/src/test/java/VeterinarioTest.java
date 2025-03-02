@@ -59,7 +59,7 @@ public class VeterinarioTest {
         assertTrue(true);
     }
 
-    @Test
+@Test
     public void testListarAnimais() {
         Animal animal = new Animal();
         Veterinario veterinario = new Veterinario();
@@ -72,7 +72,9 @@ public class VeterinarioTest {
 
         veterinario.cadastrarAnimal(animal);
         veterinario.cadastrarAnimal(animal2);
-        List<Animal> animais = veterinario.listarAnimais();
-        assertEquals(animais,animais);
+
+        List<Animal> animaisCadastrados = veterinario.getAnimais();
+        Assert.assertEquals(2, animaisCadastrados.size());
+        Assert.assertEquals(veterinario.listarAnimais(), veterinario.getAnimais());
     }
 }
